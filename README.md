@@ -8,12 +8,12 @@ Dyn compatible marker.
 
 ## What is this?
 
-This crate provides marker whether trait is [dyn compatible] or not.
-("dyn compatible" is also called "object safe".)
+This crate provides marker whether trait is [`dyn` compatible] or not.
+("`dyn` compatible" is also called "object safe".)
 
 ## Background
 
-It is important if trait is dyn compatible or not. However, Rust syntax does
+It is important if trait is `dyn` compatible or not. However, Rust syntax does
 not provide marker for it. Instead, it is determined from the kinds of methods
 included in the trait. So, at code reading, we can't judge that without seeing
 all methods of the trait. Also, careless methods adding and removing to traits
@@ -29,4 +29,4 @@ pub trait MyTrait {
 ```
 
 <!-- Links -->
-[dyn compatible]: https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility
+[`dyn` compatible]: https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility
