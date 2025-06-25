@@ -21,7 +21,7 @@ may result in unexpected dyn compatibility change.
 
 ## Examples
 
-```
+```rust
 #[dyn_compatible(true)]
 pub trait MyTrait {
     fn some_method(&self);
