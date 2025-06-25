@@ -9,7 +9,7 @@ Dyn compatible marker.
 ## What is this?
 
 This crate provides marker to indicate wheather the trait is [`dyn` compatible]
-or not. <br/> ("`dyn` compatible" is also called "object safe".)
+or not. ("`dyn` compatible" is also called "object safe".)
 
 ## Background
 
@@ -44,7 +44,7 @@ trait NotDynTrait {
 }
 ```
 
-... exppand like this.
+... expanded like these.
 
 ```rust
 trait DynTrait {
