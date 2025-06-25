@@ -8,8 +8,8 @@ Dyn compatible marker.
 
 ## What is this?
 
-This crate provides marker whether trait is [`dyn` compatible] or not.
-("`dyn` compatible" is also called "object safe".)
+This crate provides marker to indicate wheather the trait is [`dyn` compatible]
+or not. <br/> ("`dyn` compatible" is also called "object safe".)
 
 ## Background
 
@@ -23,10 +23,46 @@ may result in unexpected `dyn` compatibility change.
 
 ```rust
 #[dyn_compatible(true)]
-pub trait MyTrait {
+trait MyTrait {
     fn some_method(&self);
 }
 ```
+
+## Under the hood
+
+For example, following two traits are ...
+
+```rust
+#[dyn_compatible(true)]
+trait DynTrait {
+    fn some_method(&self);
+}
+
+#[dyn_compatible(false)]
+trait NotDynTrait {
+    fn some_method(&self);
+}
+```
+
+... exppand like this.
+
+```rust
+trait DynTrait {
+    fn some_method(&self);
+}
+
+impl dyn DynTrait {}
+
+trait NotDynTrait: dyn_compatible::NotDyn {
+    fn some_method(&self);
+}
+```
+
+## What's new?
+
+v0.1.1
+
+* Polish documentation
 
 <!-- Links -->
 [`dyn` compatible]: https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility
