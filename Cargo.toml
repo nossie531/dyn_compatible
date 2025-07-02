@@ -9,7 +9,7 @@ license = "MIT OR Apache-2.0"
 
 [package]
 name = "dyn_compatible"
-version = "0.1.1"
+version = "0.1.0"
 description = "Dyn compatible marker"
 keywords = ["dyn-compatible", "object-safe"]
 categories = ["no-std", "rust-patterns"]

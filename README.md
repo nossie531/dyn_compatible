@@ -58,11 +58,6 @@ trait NotDynTrait: dyn_compatible::NotDyn {
 }
 ```
 
-## What's new?
+## Versions
 
-v0.1.1
-
-* Polish documentation
-
-<!-- Links -->
-[`dyn` compatible]: https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility
+See the [CHANGELOG](CHANGELOG.md).
