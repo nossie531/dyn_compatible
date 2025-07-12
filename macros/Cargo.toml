@@ -1,6 +1,6 @@
 [package]
 name = "dyn_compatible_macro"
-version = "0.1.0"
+version = "0.1.1"
 description = "Macros for `dyn_compatible`."
 authors.workspace = true
 edition.workspace = true
