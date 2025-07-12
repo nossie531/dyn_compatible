@@ -13,11 +13,11 @@ or not. ("`dyn` compatible" is also called "object safe".)
 
 ## Background
 
-It is important if trait is `dyn` compatible or not. However, Rust syntax does
-not provide marker for it. Instead, it is determined from the kinds of methods
-included in the trait. So, at code reading, we can't judge that without seeing
-all methods of the trait. Also, careless methods adding and removing to traits
-may result in unexpected `dyn` compatibility change.
+It is important if trait is `dyn` compatible or not. However, Rust syntax
+does not provide marker for it. Instead, it is determined from the kinds of
+methods included in the trait. So, at code reading, we humans can't judge it
+at a glance. Also, careless methods adding and removing to traits may result
+in unexpected `dyn` compatibility change.
 
 ## Examples
 
