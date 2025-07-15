@@ -8,17 +8,6 @@
 
 pub mod prelude;
 
-/// `dyn_compatible` attribute macro.
-///
-/// # Examples
-///
-/// ```
-/// # use dyn_compatible::prelude::*;
-/// #[dyn_compatible(true)]
-/// pub trait MyTrait {
-///     fn some_method(&self);
-/// }
-/// ```
 pub use dyn_compatible_macro::dyn_compatible;
 
 pub use not_dyn::*;
