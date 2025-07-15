@@ -5,11 +5,11 @@
 
 #![warn(missing_docs)]
 
-use dyn_compatible_impl::parse_dyn_compatible;
 use proc_macro as pm;
 use proc_macro2::TokenStream;
+use translate::translate_dyn_compatible;
 
-mod dyn_compatible_impl;
+mod translate;
 
 /// `dyn_compatible` assertion attribute.
 ///
@@ -29,6 +29,6 @@ mod dyn_compatible_impl;
 pub fn dyn_compatible(attr: pm::TokenStream, item: pm::TokenStream) -> pm::TokenStream {
     let attr = TokenStream::from(attr);
     let item = TokenStream::from(item);
-    let ret = parse_dyn_compatible(attr, item);
+    let ret = translate_dyn_compatible(attr, item);
     pm::TokenStream::from(ret)
 }

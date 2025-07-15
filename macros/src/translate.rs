@@ -1,11 +1,11 @@
-//! `dyn_compatible` attribute implementation.
+//! Provider of [`translate_dyn_compatible`].
 
 use proc_macro2::TokenStream;
 use quote::{ToTokens, quote};
 use syn::{self, Error};
 
-/// Parse `dyn_compatible` attribute and its item.
-pub fn parse_dyn_compatible(attr: TokenStream, item: TokenStream) -> TokenStream {
+/// Translate `dyn_compatible` attribute and its item.
+pub fn translate_dyn_compatible(attr: TokenStream, item: TokenStream) -> TokenStream {
     let attr = parse_attr(attr);
     let item = parse_item(item);
     let errs = [attr.as_ref().err(), item.as_ref().err()];

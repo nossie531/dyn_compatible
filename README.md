@@ -60,4 +60,4 @@ trait NotDynTrait: dyn_compatible::NotDyn {
 
 ## Versions
 
-See the [CHANGELOG](CHANGELOG.md).
+See [CHANGELOG](CHANGELOG.md).
