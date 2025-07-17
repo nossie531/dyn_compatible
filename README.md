@@ -11,6 +11,8 @@ Dyn compatible marker.
 This crate provides marker to indicate wheather the trait is [`dyn` compatible]
 or not. ("`dyn` compatible" is also called "object safe".)
 
+[`dyn` compatible]: https://doc.rust-lang.org/reference/items/traits.html#dyn-compatibility
+
 ## Background
 
 It is important if trait is `dyn` compatible or not. However, Rust syntax
