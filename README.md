@@ -60,6 +60,6 @@ trait NotDynTrait: dyn_compatible::NotDyn {
 }
 ```
 
-## Versions
+## History
 
 See [CHANGELOG](CHANGELOG.md).
